@@ -1,4 +1,4 @@
-import { name as NAMESPACE } from "./package.json";
+import { name as NAMESPACE, version } from "./package.json";
 import autoCheck from "juejin-auto-check/main";
 import { version as autoCheckVersion } from "juejin-auto-check/package.json";
 import linkDirect from "juejin-link-direct/main";
@@ -120,7 +120,7 @@ function handleClick(id: number) {
 async function getConfigDom(): Promise<HTMLDivElement | null> {
   return new Promise((resolve) => {
     let timer = setInterval(() => {
-      // if (document.readyState !== "complete") return;
+      if (document.readyState !== "complete") return;
       const root = document.querySelector<HTMLDivElement>("#root");
       if (!root) {
         return;
@@ -232,7 +232,7 @@ async function insertConfigPanel() {
 
   configDom.innerHTML = `
   <div class="left">
-    <div class="title">掘金助手</div>
+    <div class="title">掘金助手 V${version}</div>
     <div class="desc">掘金插件多合一</div>
     <div class="link">
       <a href="https://greasyfork.org/zh-CN/scripts/459061-%E6%8E%98%E9%87%91-%E6%8E%98%E9%87%91%E5%8A%A9%E6%89%8B" target="__blank">脚本详情</a>
