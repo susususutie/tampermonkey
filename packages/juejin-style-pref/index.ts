@@ -1,3 +1,3 @@
-import "./index.css";
+import main from "./main";
 
-export {};
+main();

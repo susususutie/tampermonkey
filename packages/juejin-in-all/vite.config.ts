@@ -14,8 +14,8 @@ export default defineConfig({
         icon: "https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web//static/favicons/favicon-32x32.png",
         namespace: "http://tampermonkey.net/",
 
-        name: "[掘金]样式优化",
-        description: "优化掘金的页面样式.",
+        name: "[掘金]掘金助手",
+        description: "掘金插件多合一",
         author: "sutie",
         match: ["https://juejin.cn/*"],
         grant: "none",

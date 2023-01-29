@@ -1,0 +1,21 @@
+{
+  "name": "juejin-in-all",
+  "private": true,
+  "version": "0.2.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.4",
+    "vite": "^4.0.4",
+    "vite-plugin-monkey": "^2.11.1"
+  },
+  "dependencies": {
+    "juejin-auto-check": "workspace:*",
+    "juejin-link-direct": "workspace:*",
+    "juejin-show-collection": "workspace:*",
+    "juejin-style-pref": "workspace:*"
+  }
+}

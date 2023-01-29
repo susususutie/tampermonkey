@@ -1,7 +1,9 @@
-/* html {
-  filter: invert(1) hue-rotate(180deg);
-} */
+import { name as NAMESPACE } from "./package.json";
 
+function insertStyle(id: string) {
+  const style = document.createElement("style");
+  style.id = id;
+  style.innerHTML = `
 .nav-item.link-item.download-icon,
 .nav-item.vip-entry,
 .special-activity,
@@ -36,4 +38,25 @@
 }
 #comment-box {
   max-width: 100% !important;
+}  
+`;
+  document.head.appendChild(style);
+}
+
+export default function main() {
+  const id = `id-${NAMESPACE}`;
+  let times = 10;
+  let timer = setInterval(() => {
+    const style = document.getElementById(id);
+    if (!style) {
+      insertStyle(id);
+    }
+
+    if (document.readyState === "complete") {
+      times -= 1;
+    }
+    if (times < 0) {
+      clearInterval(timer);
+    }
+  }, 300);
 }
