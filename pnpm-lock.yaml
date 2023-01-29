@@ -6,61 +6,61 @@ importers:
     specifiers:
       typescript: ^4.9.4
       vite: ^4.0.4
-      vite-plugin-monkey: ^2.11.0
+      vite-plugin-monkey: ^2.11.1
     devDependencies:
       typescript: 4.9.4
       vite: 4.0.4
-      vite-plugin-monkey: 2.11.0_vite@4.0.4
+      vite-plugin-monkey: 2.11.1_vite@4.0.4
 
   packages/juejin-auto-check:
     specifiers:
       typescript: ^4.9.4
       vite: ^4.0.4
-      vite-plugin-monkey: ^2.11.0
+      vite-plugin-monkey: ^2.11.1
     devDependencies:
       typescript: 4.9.4
       vite: 4.0.4
-      vite-plugin-monkey: 2.11.0_vite@4.0.4
+      vite-plugin-monkey: 2.11.1_vite@4.0.4
 
   packages/juejin-link-direct:
     specifiers:
       typescript: ^4.9.4
       vite: ^4.0.4
-      vite-plugin-monkey: ^2.11.0
+      vite-plugin-monkey: ^2.11.1
     devDependencies:
       typescript: 4.9.4
       vite: 4.0.4
-      vite-plugin-monkey: 2.11.0_vite@4.0.4
+      vite-plugin-monkey: 2.11.1_vite@4.0.4
 
   packages/juejin-show-collection:
     specifiers:
       typescript: ^4.9.4
       vite: ^4.0.4
-      vite-plugin-monkey: ^2.11.0
+      vite-plugin-monkey: ^2.11.1
     devDependencies:
       typescript: 4.9.4
       vite: 4.0.4
-      vite-plugin-monkey: 2.11.0_vite@4.0.4
+      vite-plugin-monkey: 2.11.1_vite@4.0.4
 
   packages/juejin-style-pref:
     specifiers:
       typescript: ^4.9.4
       vite: ^4.0.4
-      vite-plugin-monkey: ^2.11.0
+      vite-plugin-monkey: ^2.11.1
     devDependencies:
       typescript: 4.9.4
       vite: 4.0.4
-      vite-plugin-monkey: 2.11.0_vite@4.0.4
+      vite-plugin-monkey: 2.11.1_vite@4.0.4
 
   packages/website-feature-demo:
     specifiers:
       typescript: ^4.9.4
       vite: ^4.0.4
-      vite-plugin-monkey: ^2.11.0
+      vite-plugin-monkey: ^2.11.1
     devDependencies:
       typescript: 4.9.4
       vite: 4.0.4
-      vite-plugin-monkey: 2.11.0_vite@4.0.4
+      vite-plugin-monkey: 2.11.1_vite@4.0.4
 
 packages:
 
@@ -507,8 +507,8 @@ packages:
     hasBin: true
     dev: true
 
-  /vite-plugin-monkey/2.11.0_vite@4.0.4:
-    resolution: {integrity: sha512-OUDsPkJEaIRsQQDADzai9NSJtlpg2z7bn6SkU4rxysD94kmDyJkW7wwZtVy1WbkTpgCIGodb3vQb0cefigM9vg==}
+  /vite-plugin-monkey/2.11.1_vite@4.0.4:
+    resolution: {integrity: sha512-sdtFhIkkJjKX4Bc5/sFbimRanaYH7fs932VLV6+FsbT+bNgsZ6TBszdaHauuTDLb3HOr37SP1mgkS/NpIwmXtg==}
     engines: {node: ^14.18 || >= 16, pnpm: '>=6'}
     peerDependencies:
       vite: '>=3.0.0'
