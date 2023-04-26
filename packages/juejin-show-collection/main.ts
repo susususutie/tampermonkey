@@ -26,7 +26,9 @@ function callback(list: ResultItem[] | { item_info: ResultItem }[]) {
     }
 
     const firstEle = list.children[0] as HTMLLIElement;
-    const dataV = Object.keys(firstEle.dataset).find((k) => k.startsWith("v-"));
+    const dataV = Object.keys(firstEle.dataset).find(
+      (k) => k.startsWith("v-") || k.startsWith("v")
+    );
     if (!dataV) {
       return;
     }
