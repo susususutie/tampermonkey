@@ -21,6 +21,7 @@
 - [[掘金]样式优化 v0.4.0](https://greasyfork.org/zh-CN/scripts/457897)
 - [[掘金]外链直达 v0.4.0](https://greasyfork.org/zh-CN/scripts/458015)
 - [[掘金]显示文章收藏数 v0.4.0](https://greasyfork.org/zh-CN/scripts/459046)
+- [[掘金]屏蔽作者 v0.1.0](https://greasyfork.org/zh-CN/scripts/ )
 
 ## Info
 

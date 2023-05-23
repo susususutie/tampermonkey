@@ -5,7 +5,8 @@
   "packageManager": "pnpm@7.24.3",
   "scripts": {
     "build-all": "pnpm -r --filter=!website-* build",
-    "build:juejin-style-pref": "pnpm -r --filter juejin-style-pref build"
+    "build:juejin-style-pref": "pnpm -r --filter juejin-style-pref build",
+    "build:juejin-block-author": "pnpm -r --filter juejin-block-author build"
   },
   "devDependencies": {
     "typescript": "^4.9.4",

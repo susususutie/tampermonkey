@@ -1,5 +1,6 @@
 {
   "name": "juejin-block-author",
+  "description": "[掘金]屏蔽作者",
   "private": true,
   "version": "0.1",
   "type": "module",
