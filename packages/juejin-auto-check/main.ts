@@ -1,5 +1,5 @@
 const NAMESPACE = "juejin-auto-check";
-const LOCALSTORAGE_KEY = "tampermonkey-" + NAMESPACE;
+const LOCAL_STORAGE_KEY = "tampermonkey-" + NAMESPACE;
 
 function getDate() {
   const date = new Date();
@@ -21,14 +21,35 @@ function createIframe(id: string): HTMLIFrameElement {
   iframe.src = "https://juejin.cn/user/center/signin";
   return iframe;
 }
+
 function removeIframe(id: string) {
-  const ifrm = document.getElementById(id) as HTMLIFrameElement | null;
-  if (ifrm) {
-    document.body.removeChild(ifrm);
+  const ele = document.getElementById(id) as HTMLIFrameElement | null;
+  if (ele) {
+    document.body.removeChild(ele);
   }
 }
 
-function signin() {
+function updateBtn() {
+  // const daysEle = document.querySelector(".title-days");
+  // if (daysEle) {
+  //   daysEle.textContent = daysEle.textContent!.replace(
+  //     /\d+/,
+  //     (d) => `${+d + 1}`
+  //   );
+  // }
+  const signInBtn = document.querySelector(".signin-btn");
+  if (signInBtn) {
+    signInBtn.classList.remove("signin-btn");
+    signInBtn.classList.add("signedin-btn");
+  }
+  const textEle = signInBtn?.querySelector(".btn-text");
+  if (textEle) {
+    textEle.classList.add("signed-text");
+    textEle.textContent = "已签到";
+  }
+}
+
+function signIn() {
   const id = `iframe-${Math.ceil(Math.random() * 100)}`;
   const iframe = createIframe(id);
   document.body.prepend(iframe);
@@ -44,20 +65,21 @@ function signin() {
       const timer = setTimeout(() => {
         clearTimeout(timer);
         removeIframe(id);
+        updateBtn();
       }, 1000);
     }
   };
 }
 
 export default function main() {
-  const lastestDay = localStorage.getItem(LOCALSTORAGE_KEY);
+  const latestDay = localStorage.getItem(LOCAL_STORAGE_KEY);
   const today = getDate();
-  if (!lastestDay || lastestDay !== today) {
+  if (!latestDay || latestDay !== today) {
     try {
-      signin();
-      localStorage.setItem(LOCALSTORAGE_KEY, today);
+      signIn();
+      localStorage.setItem(LOCAL_STORAGE_KEY, today);
     } catch (error) {
-      localStorage.removeItem(LOCALSTORAGE_KEY);
+      localStorage.removeItem(LOCAL_STORAGE_KEY);
     }
   }
 }
