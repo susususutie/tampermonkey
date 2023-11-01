@@ -22,6 +22,16 @@ importers:
       vite: 4.0.4
       vite-plugin-monkey: 2.11.1_vite@4.0.4
 
+  packages/juejin-collection:
+    specifiers:
+      typescript: ^4.9.4
+      vite: ^4.0.4
+      vite-plugin-monkey: ^2.11.1
+    devDependencies:
+      typescript: 4.9.4
+      vite: 4.0.4
+      vite-plugin-monkey: 2.11.1_vite@4.0.4
+
   packages/juejin-in-all:
     specifiers:
       juejin-auto-check: workspace:*
